@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Portal Digital de Informações</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Inter',sans-serif;
+}
+
+body{
+background:#ffffff;
+color:#1e293b;
+}
+
+/* NAV */
+.nav{
+background:#0f172a;
+color:#fff;
+padding:15px 20px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+.logo{
+font-weight:700;
+}
+
+.menu{
+font-size:14px;
+}
+
+/* HERO */
+.hero{
+padding:60px 20px;
+text-align:center;
+background:linear-gradient(180deg,#f1f5f9,#ffffff);
+}
+
+.hero h1{
+font-size:28px;
+margin-bottom:10px;
+}
+
+.hero p{
+color:#475569;
+font-size:15px;
+max-width:600px;
+margin:auto;
+}
+
+/* BOTÃO */
+.btn{
+margin-top:25px;
+padding:16px 30px;
+background:#2563eb;
+color:#fff;
+border:none;
+border-radius:8px;
+font-weight:600;
+cursor:pointer;
+}
+
+/* GRID */
+.grid{
+max-width:1000px;
+margin:auto;
+padding:30px 20px;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+}
+
+.card{
+background:#f8fafc;
+padding:20px;
+border-radius:12px;
+font-size:14px;
+}
+
+/* SECTION */
+.section{
+max-width:900px;
+margin:30px auto;
+padding:20px;
+font-size:14px;
+color:#475569;
+}
+
+/* FOOTER */
+.footer{
+background:#0f172a;
+color:#cbd5f5;
+padding:20px;
+text-align:center;
+font-size:12px;
+}
+
+.footer a{
+color:#93c5fd;
+text-decoration:none;
+margin:0 6px;
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- NAV -->
+<div class="nav">
+<div class="logo">Portal Digital</div>
+<div class="menu">Informações Online</div>
+</div>
+
+<!-- HERO -->
+<div class="hero">
+
+<h1>Acesso a Informações Online</h1>
+
+<p>
+Encontre conteúdos e serviços disponíveis na internet de forma organizada e transparente.
+</p>
+
+<button class="btn" onclick="acessar()">
+Acessar Plataforma
+</button>
+
+</div>
+
+<!-- BENEFÍCIOS -->
+<div class="grid">
+
+<div class="card">✔ Interface simples e fácil de usar</div>
+<div class="card">✔ Acesso a conteúdos externos</div>
+<div class="card">✔ Navegação segura e transparente</div>
+
+</div>
+
+<!-- SOBRE -->
+<div class="section">
+<h2>Sobre o portal</h2>
+<p>
+Este site funciona como um agregador de informações e pode direcionar usuários para plataformas de terceiros.  
+Não possuímos vínculo com instituições oficiais e não garantimos resultados específicos.
+</p>
+</div>
+
+<!-- AVISO -->
+<div class="section">
+<h2>Informações importantes</h2>
+<p>
+Ao continuar, você poderá ser redirecionado para um site externo.  
+Recomendamos sempre verificar os termos e condições da plataforma acessada.
+</p>
+</div>
+
+<!-- FOOTER -->
+<div class="footer">
+© 2026 Portal Digital |
+<a href="privacidade.html">Privacidade</a> |
+<a href="termos.html">Termos</a> |
+<a href="contato.html">Contato</a>
+</div>
+
+<script>
+
+function acessar(){
+window.location.href="https://taupe-brigadeiros-e32f19.netlify.app/"
+}
+
+</script>
+
+</body>
+</html>
