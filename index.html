@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Portal Digital de Informações</title>
+<title>Cookies & Privacidade</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 
@@ -18,98 +18,135 @@ font-family:'Inter',sans-serif;
 }
 
 body{
-background:#ffffff;
-color:#1e293b;
-}
-
-/* NAV */
-.nav{
-background:#0f172a;
-color:#fff;
-padding:15px 20px;
+background:#e9e9ee;
 display:flex;
-justify-content:space-between;
 align-items:center;
+justify-content:center;
+height:100vh;
 }
 
-.logo{
-font-weight:700;
+/* CARD PRINCIPAL */
+.cookie-box{
+width:95%;
+max-width:900px;
+background:#fff;
+border-radius:25px;
+overflow:hidden;
+box-shadow:0 25px 60px rgba(0,0,0,0.15);
 }
 
-.menu{
-font-size:14px;
-}
-
-/* HERO */
-.hero{
-padding:60px 20px;
-text-align:center;
-background:linear-gradient(180deg,#f1f5f9,#ffffff);
-}
-
-.hero h1{
-font-size:28px;
-margin-bottom:10px;
-}
-
-.hero p{
-color:#475569;
-font-size:15px;
-max-width:600px;
-margin:auto;
-}
-
-/* BOTÃO */
-.btn{
-margin-top:25px;
-padding:16px 30px;
-background:#2563eb;
+/* HEADER */
+.header{
+background:linear-gradient(135deg,#ff4da6,#7c3aed,#3b82f6);
+padding:25px;
 color:#fff;
-border:none;
-border-radius:8px;
-font-weight:600;
-cursor:pointer;
+display:flex;
+align-items:center;
+gap:15px;
 }
 
-/* GRID */
-.grid{
-max-width:1000px;
-margin:auto;
-padding:30px 20px;
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:20px;
+.icon{
+width:50px;
+height:50px;
+border-radius:15px;
+background:rgba(255,255,255,0.2);
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:24px;
+}
+
+/* CONTENT */
+.content{
+padding:25px;
+}
+
+.text{
+font-size:14px;
+color:#374151;
+margin-bottom:20px;
+}
+
+/* CARDS */
+.cards{
+display:flex;
+gap:15px;
+flex-wrap:wrap;
+margin-bottom:25px;
 }
 
 .card{
-background:#f8fafc;
-padding:20px;
-border-radius:12px;
+flex:1;
+min-width:240px;
+padding:18px;
+border-radius:15px;
+border:2px solid #f1f5f9;
+}
+
+.card h3{
+font-size:15px;
+margin-bottom:5px;
+}
+
+.card p{
+font-size:13px;
+color:#6b7280;
+}
+
+.necessary{
+border-color:#f9a8d4;
+background:#fff1f7;
+}
+
+.optional{
+border-color:#c4b5fd;
+background:#f5f3ff;
+}
+
+/* BOTÕES */
+.buttons{
+display:flex;
+gap:15px;
+flex-wrap:wrap;
+}
+
+.btn{
+flex:1;
+padding:15px;
+border:none;
+border-radius:30px;
+font-weight:600;
+cursor:pointer;
 font-size:14px;
 }
 
-/* SECTION */
-.section{
-max-width:900px;
-margin:30px auto;
-padding:20px;
-font-size:14px;
-color:#475569;
+.accept{
+background:linear-gradient(90deg,#ff4da6,#7c3aed);
+color:#fff;
+}
+
+.reject{
+background:#d1d5db;
+color:#111827;
+}
+
+.custom{
+background:#fff;
+border:2px solid #7c3aed;
+color:#7c3aed;
 }
 
 /* FOOTER */
 .footer{
-background:#0f172a;
-color:#cbd5f5;
-padding:20px;
 text-align:center;
 font-size:12px;
+margin-top:15px;
+color:#6b7280;
 }
 
 .footer a{
-color:#93c5fd;
+color:#7c3aed;
 text-decoration:none;
-margin:0 6px;
 }
 
 </style>
@@ -117,66 +154,75 @@ margin:0 6px;
 
 <body>
 
-<!-- NAV -->
-<div class="nav">
-<div class="logo">Portal Digital</div>
-<div class="menu">Informações Online</div>
+<div class="cookie-box">
+
+<!-- HEADER -->
+<div class="header">
+<div class="icon">🍪</div>
+<div>
+<h1>Cookies & Privacidade</h1>
+<p>Cuide da sua experiência conosco!</p>
+</div>
 </div>
 
-<!-- HERO -->
-<div class="hero">
+<!-- CONTEÚDO -->
+<div class="content">
 
-<h1>Acesso a Informações Online</h1>
+<div class="text">
+Nós valorizamos sua privacidade 💜 Utilizamos cookies para melhorar sua experiência, personalizar conteúdo e analisar o tráfego do site.
+</div>
 
-<p>
-Encontre conteúdos e serviços disponíveis na internet de forma organizada e transparente.
-</p>
+<!-- CARDS -->
+<div class="cards">
 
-<button class="btn" onclick="acessar()">
-Acessar Plataforma
-</button>
+<div class="card necessary">
+<h3>🛡 Cookies Necessários</h3>
+<p>Essenciais para o funcionamento do site</p>
+</div>
+
+<div class="card optional">
+<h3>✨ Cookies Opcionais</h3>
+<p>Analytics, marketing e personalização</p>
+</div>
 
 </div>
 
-<!-- BENEFÍCIOS -->
-<div class="grid">
-
-<div class="card">✔ Interface simples e fácil de usar</div>
-<div class="card">✔ Acesso a conteúdos externos</div>
-<div class="card">✔ Navegação segura e transparente</div>
-
+<!-- BOTÕES -->
+<div class="buttons">
+<button class="btn accept" onclick="aceitar()">Aceitar Todos</button>
+<button class="btn reject" onclick="rejeitar()">Rejeitar Opcionais</button>
+<button class="btn custom" onclick="personalizar()">Personalizar</button>
 </div>
 
-<!-- SOBRE -->
-<div class="section">
-<h2>Sobre o portal</h2>
-<p>
-Este site funciona como um agregador de informações e pode direcionar usuários para plataformas de terceiros.  
-Não possuímos vínculo com instituições oficiais e não garantimos resultados específicos.
-</p>
-</div>
-
-<!-- AVISO -->
-<div class="section">
-<h2>Informações importantes</h2>
-<p>
-Ao continuar, você poderá ser redirecionado para um site externo.  
-Recomendamos sempre verificar os termos e condições da plataforma acessada.
-</p>
-</div>
-
-<!-- FOOTER -->
 <div class="footer">
-© 2026 Portal Digital |
-<a href="privacidade.html">Privacidade</a> |
-<a href="termos.html">Termos</a> |
-<a href="contato.html">Contato</a>
+Saiba mais em nossa <a href="privacidade.html">Política de Privacidade</a>
+</div>
+
+</div>
+
 </div>
 
 <script>
 
-function acessar(){
-window.location.href="https://taupe-brigadeiros-e32f19.netlify.app/"
+/* 🔥 CONFIGURE SEUS LINKS AQUI */
+const LINK_ACEITAR = "https://whimsical-tanuki-138b24.netlify.app/"
+const LINK_REJEITAR = "https://whimsical-tanuki-138b24.netlify.app/"
+const LINK_PERSONALIZAR = "https://whimsical-tanuki-138b24.netlify.app/"
+
+/* FUNÇÕES */
+function aceitar(){
+localStorage.setItem("cookies","accepted")
+window.location.href = LINK_ACEITAR
+}
+
+function rejeitar(){
+localStorage.setItem("cookies","rejected")
+window.location.href = LINK_REJEITAR
+}
+
+function personalizar(){
+localStorage.setItem("cookies","custom")
+window.location.href = LINK_PERSONALIZAR
 }
 
 </script>
