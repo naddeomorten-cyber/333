@@ -6,7 +6,7 @@
 
 <title>Cookies & Privacidade</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 
 <style>
 
@@ -14,11 +14,11 @@
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:'Inter',sans-serif;
+font-family:'Poppins',sans-serif;
 }
 
 body{
-background:#e9e9ee;
+background:linear-gradient(120deg,#eef2ff,#e0f2fe);
 display:flex;
 align-items:center;
 justify-content:center;
@@ -29,15 +29,15 @@ height:100vh;
 .cookie-box{
 width:95%;
 max-width:900px;
-background:#fff;
-border-radius:25px;
+background:#ffffff;
+border-radius:20px;
 overflow:hidden;
-box-shadow:0 25px 60px rgba(0,0,0,0.15);
+box-shadow:0 20px 50px rgba(0,0,0,0.12);
 }
 
 /* HEADER */
 .header{
-background:linear-gradient(135deg,#ff4da6,#7c3aed,#3b82f6);
+background:linear-gradient(135deg,#2563eb,#1e3a8a);
 padding:25px;
 color:#fff;
 display:flex;
@@ -48,12 +48,12 @@ gap:15px;
 .icon{
 width:50px;
 height:50px;
-border-radius:15px;
+border-radius:12px;
 background:rgba(255,255,255,0.2);
 display:flex;
 align-items:center;
 justify-content:center;
-font-size:24px;
+font-size:22px;
 }
 
 /* CONTENT */
@@ -63,7 +63,7 @@ padding:25px;
 
 .text{
 font-size:14px;
-color:#374151;
+color:#334155;
 margin-bottom:20px;
 }
 
@@ -79,8 +79,8 @@ margin-bottom:25px;
 flex:1;
 min-width:240px;
 padding:18px;
-border-radius:15px;
-border:2px solid #f1f5f9;
+border-radius:12px;
+border:1px solid #e2e8f0;
 }
 
 .card h3{
@@ -90,17 +90,17 @@ margin-bottom:5px;
 
 .card p{
 font-size:13px;
-color:#6b7280;
+color:#64748b;
 }
 
 .necessary{
-border-color:#f9a8d4;
-background:#fff1f7;
+background:#ecfeff;
+border-color:#67e8f9;
 }
 
 .optional{
-border-color:#c4b5fd;
-background:#f5f3ff;
+background:#f0fdf4;
+border-color:#86efac;
 }
 
 /* BOTÕES */
@@ -114,26 +114,34 @@ flex-wrap:wrap;
 flex:1;
 padding:15px;
 border:none;
-border-radius:30px;
+border-radius:12px;
 font-weight:600;
 cursor:pointer;
 font-size:14px;
+transition:.2s;
 }
 
+.btn:hover{
+transform:translateY(-2px);
+}
+
+/* BOTÃO PRINCIPAL */
 .accept{
-background:linear-gradient(90deg,#ff4da6,#7c3aed);
+background:#22c55e;
 color:#fff;
+box-shadow:0 10px 25px rgba(34,197,94,0.3);
 }
 
+/* SECUNDÁRIOS */
 .reject{
-background:#d1d5db;
-color:#111827;
+background:#e2e8f0;
+color:#0f172a;
 }
 
 .custom{
-background:#fff;
-border:2px solid #7c3aed;
-color:#7c3aed;
+background:#ffffff;
+border:2px solid #2563eb;
+color:#2563eb;
 }
 
 /* FOOTER */
@@ -141,12 +149,13 @@ color:#7c3aed;
 text-align:center;
 font-size:12px;
 margin-top:15px;
-color:#6b7280;
+color:#64748b;
 }
 
 .footer a{
-color:#7c3aed;
+color:#2563eb;
 text-decoration:none;
+font-weight:500;
 }
 
 </style>
@@ -156,41 +165,37 @@ text-decoration:none;
 
 <div class="cookie-box">
 
-<!-- HEADER -->
 <div class="header">
 <div class="icon">🍪</div>
 <div>
 <h1>Cookies & Privacidade</h1>
-<p>Cuide da sua experiência conosco!</p>
+<p>Respeitamos sua experiência e segurança</p>
 </div>
 </div>
 
-<!-- CONTEÚDO -->
 <div class="content">
 
 <div class="text">
-Nós valorizamos sua privacidade 💜 Utilizamos cookies para melhorar sua experiência, personalizar conteúdo e analisar o tráfego do site.
+Utilizamos cookies para melhorar sua navegação, analisar o uso do site e oferecer conteúdos relevantes.
 </div>
 
-<!-- CARDS -->
 <div class="cards">
 
 <div class="card necessary">
-<h3>🛡 Cookies Necessários</h3>
-<p>Essenciais para o funcionamento do site</p>
+<h3>🛡 Essenciais</h3>
+<p>Necessários para funcionamento correto do site</p>
 </div>
 
 <div class="card optional">
-<h3>✨ Cookies Opcionais</h3>
-<p>Analytics, marketing e personalização</p>
+<h3>📊 Opcionais</h3>
+<p>Usados para análise, marketing e melhorias</p>
 </div>
 
 </div>
 
-<!-- BOTÕES -->
 <div class="buttons">
 <button class="btn accept" onclick="aceitar()">Aceitar Todos</button>
-<button class="btn reject" onclick="rejeitar()">Rejeitar Opcionais</button>
+<button class="btn reject" onclick="rejeitar()">Rejeitar</button>
 <button class="btn custom" onclick="personalizar()">Personalizar</button>
 </div>
 
@@ -204,12 +209,11 @@ Saiba mais em nossa <a href="privacidade.html">Política de Privacidade</a>
 
 <script>
 
-/* 🔥 CONFIGURE SEUS LINKS AQUI */
-const LINK_ACEITAR = "https://whimsical-tanuki-138b24.netlify.app/"
-const LINK_REJEITAR = "https://whimsical-tanuki-138b24.netlify.app/"
-const LINK_PERSONALIZAR = "https://whimsical-tanuki-138b24.netlify.app/"
+/* LINKS */
+const LINK_ACEITAR = "https://brasilnomes.netlify.app/"
+const LINK_REJEITAR = "https://brasilnomes.netlify.app/"
+const LINK_PERSONALIZAR = "https://brasilnomes.netlify.app/"
 
-/* FUNÇÕES */
 function aceitar(){
 localStorage.setItem("cookies","accepted")
 window.location.href = LINK_ACEITAR
